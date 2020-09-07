@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from polynomial import Polynomial
 import unittest
 
