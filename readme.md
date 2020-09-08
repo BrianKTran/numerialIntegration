@@ -4,8 +4,6 @@
 L = delta_x( f(x_0) + f(x_1) +....+ f(x_n-1)
 ##### Right 
 R = delta_x( f(x_0) + f(x_1) +....+ f(x_n)
-##### Midpoint
-M = delta_x( f(x_1/2) + f(x_3/2) +....+ f(x_n-(1/2))
 ### Trapezoidal Integration
 T = (1/2) delta_x( f(x_0) + f(x_1) +....+ f(x_n-1) ) +
     (1/2) delta_x( f(x_0) + f(x_1) +....+ f(x_n) )
