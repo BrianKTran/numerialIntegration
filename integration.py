@@ -4,10 +4,12 @@ from polynomial import Polynomial
 import unittest
 
 class RectIntegration(object):
+  # Computes the width of the rectangles
   @staticmethod
   def findDeltaX(a,b,n):
     return (b-a)/n
 
+  # Computes the integral of polynomial using left rectangular integration
   @classmethod
   def evalLeft(cls, lower, upper, n, poly):
     delta_x = cls.findDeltaX(lower, upper, n)
@@ -15,6 +17,7 @@ class RectIntegration(object):
     fx = [poly.evaluate(x) for x in xs]
     return delta_x*sum(fx)
 
+  # Computes the integral of polynomial using right rectangular integration
   @classmethod
   def evalRight(cls, lower, upper, n, poly):
     delta_x = cls.findDeltaX(lower, upper, n)
@@ -24,12 +27,13 @@ class RectIntegration(object):
     # print()
     return delta_x*sum(fx)
 
+# Computes the integral of polynomial using trapezoidal integration
 class TrapIntegration(object):
   @staticmethod
   def evaluate(lower, upper, n, poly):
     return .5 *(RectIntegration.evalLeft(lower, upper, n, poly) + 
                 RectIntegration.evalRight(lower, upper, n, poly))
-
+# Computes the exact integral of polynomial
 class ExactIntegration(object):
   @staticmethod
   def evaluate(lower, upper, poly):
