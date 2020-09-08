@@ -10,7 +10,9 @@ class Polynomial(object):
     self.coef = []
     
   def setCoef(self, coef):
+    # if the length of the coeffecient is equal to the degree plus one
     if len(coef) == self.degree+1:
+      # set the object to the coeffecient
       self.coef = coef
       
   def evaluate(self, x):
