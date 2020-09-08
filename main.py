@@ -3,7 +3,7 @@
 from polynomial import Polynomial
 from integration import RectIntegration, TrapIntegration, ExactIntegration
 
-print("Welcome to the integration calculator ")
+print("Welcome to the Numerical Integration Computer! \nGiven the degree, coeffecients, lower bound, upper bound and number of subdivisions of any polynomial, \nthis program will compute the Rectangular, Trapezoidal and Exact Integrals of any polynomial! \nEnjoy! \nHappy Calc-ing! ")
 exit = False
 
 while not exit:

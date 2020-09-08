@@ -19,9 +19,9 @@ class RectIntegration(object):
   def evalRight(cls, lower, upper, n, poly):
     delta_x = cls.findDeltaX(lower, upper, n)
     xs = [lower+(i+1)*delta_x for i in range(n)]
-    print(xs)
+    # print(xs)
     fx = [poly.evaluate(x) for x in xs]
-    print()
+    # print()
     return delta_x*sum(fx)
 
 class TrapIntegration(object):
@@ -37,7 +37,9 @@ class ExactIntegration(object):
     return anti_deriv.evaluate(upper) - anti_deriv.evaluate(lower)
 
 if __name__ == '__main__':
+    # Test Class that runs integrations and return an output
     class TestPolynomial(unittest.TestCase):
+        # Set up is called before each test and then 
         def setUp(self):
             self.poly = Polynomial(2)
             self.poly.setCoef([1., 2., 1.])
