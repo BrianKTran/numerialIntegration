@@ -1,13 +1,14 @@
 # Numerical Intergration 
 ### Rectangle Integration
 ##### Left
-L = delta_x( f(x_0) + f(x_1) +....+ f(x_n-1)
+
 L = delta<sub>x</sub>( f(x<sub>0</sub>) + f(x<sub>1</sub>) +....+ f(x<sub>n-1</sub>)
+
 ##### Right 
-R = delta_x( f(x_0) + f(x_1) +....+ f(x_n)
+R = delta<sub>x</sub>( f(x<sub>0</sub>) + f(x<sub>1</sub>) +....+ f(x<sub>n</sub>)
 ### Trapezoidal Integration
-T = (1/2) delta_x( f(x_0) + f(x_1) +....+ f(x_n-1) ) +
-    (1/2) delta_x( f(x_0) + f(x_1) +....+ f(x_n) )
+T = (1/2) delta<sub>x</sub>( f(x<sub>0</sub> + f(x<sub>1</sub>) +....+ f(x<sub>n-1</sub>) ) +
+    (1/2) delta<sub>x</sub>( f(x<sub>0</sub>) + f(x<sub>1</sub>) +....+ f(x<sub>n</sub>) )
 ### Exact Integration
 a∫b f(x) dx
 ### Installation

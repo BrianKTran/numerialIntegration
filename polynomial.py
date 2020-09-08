@@ -3,6 +3,8 @@
 import unittest
 
 class Polynomial(object):
+  # Constructor for polynomial where objects 
+  # are degree and coefficients of a given polynomial
   def __init__(self, degree):
     self.degree = degree
     self.coef = []
@@ -53,6 +55,6 @@ if __name__ == '__main__':
             poly.setCoef([1, 2, 1])
             anti = Polynomial(3)
             anti.setCoef([1/3, 1, 1, 0])
-            self.assertEqual(poly.find_anti().coef, anti.coef)
+            self.assertEqual(poly.find_anti().coef, anti.coef, poly.find_anti().degree)
             
     unittest.main()

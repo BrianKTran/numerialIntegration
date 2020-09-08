@@ -9,7 +9,7 @@ class RectIntegration(object):
   def findDeltaX(a,b,n):
     return (b-a)/n
 
-  # Computes the integral of polynomial using left rectangular integration
+  # Computes the integral of a polynomial using left rectangular integration
   @classmethod
   def evalLeft(cls, lower, upper, n, poly):
     delta_x = cls.findDeltaX(lower, upper, n)
@@ -17,7 +17,7 @@ class RectIntegration(object):
     fx = [poly.evaluate(x) for x in xs]
     return delta_x*sum(fx)
 
-  # Computes the integral of polynomial using right rectangular integration
+  # Computes the integral of a polynomial using right rectangular integration
   @classmethod
   def evalRight(cls, lower, upper, n, poly):
     delta_x = cls.findDeltaX(lower, upper, n)
@@ -27,13 +27,13 @@ class RectIntegration(object):
     # print()
     return delta_x*sum(fx)
 
-# Computes the integral of polynomial using trapezoidal integration
+# Computes the integral of a polynomial using trapezoidal integration
 class TrapIntegration(object):
   @staticmethod
   def evaluate(lower, upper, n, poly):
     return .5 *(RectIntegration.evalLeft(lower, upper, n, poly) + 
                 RectIntegration.evalRight(lower, upper, n, poly))
-# Computes the exact integral of polynomial
+# Computes the exact integral of a polynomial
 class ExactIntegration(object):
   @staticmethod
   def evaluate(lower, upper, poly):
@@ -47,18 +47,24 @@ if __name__ == '__main__':
         def setUp(self):
             self.poly = Polynomial(2)
             self.poly.setCoef([1., 2., 1.])
-
+        # Tests whether the integral of a polynomial is computed 
+        # using left rectangular integration
         def test_evalLeft(self):
             self.assertTrue(abs(RectIntegration.evalLeft(0, 1, 2, self.poly) 
                                      - 1.625) < .5)
-
+        # Tests whether the integral of a polynomial is computed 
+        # using right rectangular integration
         def test_evalRight(self):
             self.assertTrue(abs(RectIntegration.evalRight(0, 1, 2, self.poly) 
                                      - 3.125) < .5)
+        # Tests whether the integral of a polynomial is computed 
+        # using trapezoidal integration
         def test_evalTrap(self):
             self.assertTrue(abs(TrapIntegration.evaluate(0, 1, 2, self.poly) 
                                      - 2.375) < .5)
-
+        
+        # Tests whether the integral of a polynomial is computed 
+        # using exact integration
         def test_evalExact(self):
             self.assertTrue(abs(ExactIntegration.evaluate(0, 1, self.poly) 
                                      - 2.333) < .5)
