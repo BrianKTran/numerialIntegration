@@ -2,15 +2,15 @@
 ### Rectangle Integration
 ##### Left
 
-L = delta<sub>x</sub>( f(x<sub>0</sub>) + f(x<sub>1</sub>) +....+ f(x<sub>n-1</sub>)
+L = delta<sub>x</sub>( f(x<sub>0</sub>) + f(x<sub>1</sub>) +....+ f(x<sub>n-1</sub>))
 
 ##### Right 
-R = delta<sub>x</sub>( f(x<sub>0</sub>) + f(x<sub>1</sub>) +....+ f(x<sub>n</sub>)
+R = delta<sub>x</sub>( f(x<sub>0</sub>) + f(x<sub>1</sub>) +....+ f(x<sub>n</sub>))
 ### Trapezoidal Integration
 T = (1/2) delta<sub>x</sub>( f(x<sub>0</sub> + f(x<sub>1</sub>) +....+ f(x<sub>n-1</sub>) ) +
     (1/2) delta<sub>x</sub>( f(x<sub>0</sub>) + f(x<sub>1</sub>) +....+ f(x<sub>n</sub>) )
 ### Exact Integration
-a∫b f(x) dx
+a∫b f(x)dx = F(b) - F(a)
 ### Installation
 Download python 3.85 at:
 https://www.python.org/ftp/python/3.8.5/python-3.8.5.exe
