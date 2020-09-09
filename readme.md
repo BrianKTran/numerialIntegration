@@ -80,7 +80,9 @@ OK
 
 ```
 
+```sh
 Would you like to do another calculation? y or n?: n
 
 Thank you for choosing the Numerical Integrations Challenge
 Brought to you by AccuWeather!....All Weather, All the Time!!!
+```
