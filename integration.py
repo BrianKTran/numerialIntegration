@@ -5,6 +5,8 @@ import unittest
 
 class RectIntegration(object):
   # Computes the width of the rectangles
+  # This is a static method because it is 
+  # not passing an instance of class Polynomial
   @staticmethod
   # find delta_x 
   def findDeltaX(a,b,n):
@@ -13,6 +15,10 @@ class RectIntegration(object):
     return (b-a)/n
 
   # Approximates the integral of a polynomial using left riemann sum
+  # This is a class method because it is passing 
+  # class Polynomial as a first argument - instead of an instance of the class - 
+  # inside the method to use the class and it's 
+  # properties such as setCoef(), evaluate(), and find_anti()
   @classmethod
   # this method left approximates the integral of the polynomial 
   # given the lower and upper bound 
